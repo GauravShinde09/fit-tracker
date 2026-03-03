@@ -1,0 +1,186 @@
+/* ===================================
+   SMART NAVBAR - PREMIUM SAAS
+   (White Base with Transparent Mode)
+   =================================== */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+  width: 100%;
+  box-sizing: border-box;
+  position: fixed;
+  height: 80px; 
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  
+  background-color: #FFFFFF; 
+  border-bottom: 1px solid #E5E7EB; 
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03); 
+  
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  transition: all 0.3s ease; 
+}
+
+/* --- THE TRANSPARENT HOMEPAGE OVERRIDE --- */
+.navbar.transparent {
+  background: linear-gradient(to bottom, rgba(11, 13, 20, 0.8) 0%, rgba(11, 13, 20, 0) 100%) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+  box-shadow: none !important;
+  backdrop-filter: blur(6px); 
+  -webkit-backdrop-filter: blur(6px);
+}
+
+/* --- LOGO --- */
+.navbar .logo {
+  font-size: 24px; 
+  font-weight: 800;
+  color: #FF6B00 !important; 
+  letter-spacing: -0.5px; 
+  text-transform: uppercase; 
+  display: flex;
+  align-items: center;
+  gap: 8px; 
+  text-decoration: none !important;
+}
+
+.navbar.transparent .logo {
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.9) !important;
+}
+
+/* --- NAVIGATION LINKS --- */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 55px; /* 🔥 BIGGER GAP: Spreads the links out for a premium, open feel */
+  margin: 0 auto;
+  align-items: center;
+  padding: 0;
+}
+
+/* 🔥 Default State (Black Text, Ultra-Smooth Transition) */
+.nav-links li a {
+  text-decoration: none !important;
+  color: #111827 !important; 
+  font-weight: 700 !important; /* 🔥 BOLDER: Makes the text look solid and intentional */
+  font-size: 1.1rem !important; /* 🔥 LARGER: Better readability */
+  padding: 8px 12px !important; /* Invisible padding so the click target is bigger */
+  letter-spacing: 0.5px !important;
+  transition: color 0.25s ease-in-out !important; /* Smooth text-color fade */
+  background-color: transparent !important;
+}
+
+/* Transparent State (White text on Homepage) */
+.navbar.transparent .nav-links li a {
+  color: #FFFFFF !important; 
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.9) !important; 
+}
+
+/* 🔥 Professional Hover State (Clean Color Fade Only) */
+.nav-links li a:hover {
+  color: #FF6B00 !important;  
+  background-color: transparent !important; 
+}
+
+/* Professional Hover on Homepage */
+.navbar.transparent .nav-links li a:hover {
+  color: #FF6B00 !important; 
+  background-color: transparent !important; 
+  text-shadow: none !important; 
+}
+
+/* Active Link State */
+.nav-links li a.active {
+  color: #FF6B00 !important; 
+  font-weight: 800 !important; /* Extra bold for the page you are on */
+}
+/* --- AUTH & ACTION BUTTONS --- */
+.auth-section {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+/* Primary Button */
+.auth-section .btn {
+  background: linear-gradient(180deg, #FF7B1A 0%, #E65A00 100%);
+  color: #FFFFFF !important;
+  border: 1px solid #FF8C33; 
+  border-bottom: 3px solid #993D00; 
+  padding: 10px 20px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.1s ease;
+  box-shadow: 0 4px 10px rgba(255, 107, 0, 0.2);
+}
+
+.auth-section .btn:hover {
+  background: linear-gradient(180deg, #FF8C33 0%, #FF6B00 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(255, 107, 0, 0.3);
+  border-bottom: 3px solid #B34600;
+}
+
+.auth-section .btn:active {
+  transform: translateY(2px);
+  border-bottom-width: 1px;
+  margin-bottom: 2px;
+  box-shadow: none;
+}
+
+/* Logout Button */
+.auth-section .logout-btn {
+  background: #F1F5F9;
+  color: #475569 !important;
+  border: 1px solid #E2E8F0;
+  border-bottom: 3px solid #CBD5E1;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.1s ease;
+}
+
+.auth-section .logout-btn:hover {
+  background: #FEF2F2;
+  color: #EF4444 !important; 
+  border-color: #F87171;
+  border-bottom-color: #B91C1C;
+  transform: translateY(-2px);
+}
+
+.auth-section .logout-btn:active {
+  transform: translateY(2px);
+  border-bottom-width: 1px;
+  margin-bottom: 2px;
+}
+
+/* --- MOBILE RESPONSIVENESS --- */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    height: auto;
+    padding: 15px 20px;
+  }
+  .nav-links {
+    flex-direction: column;
+    gap: 15px;
+    margin: 15px 0;
+  }
+  .auth-section {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+  .auth-section .btn, .auth-section .logout-btn {
+    width: 100%;
+    text-align: center;
+  }
+}

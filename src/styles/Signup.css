@@ -1,0 +1,175 @@
+/* ===================================
+   SIGNUP - ELITE GATEWAY
+   (Muted Glacier Light Theme)
+   =================================== */
+
+.signup-container {
+  max-width: 440px; 
+  width: 90%; 
+  
+  /* 🔥 THE FIX: Perfectly aligned with Login, clearing the Navbar */
+  margin: 140px auto 60px auto; 
+  
+  background: #FFFFFF !important; 
+  border: 1px solid #E5E7EB !important;
+  border-top: 4px solid #FF6B00 !important; 
+  border-radius: 20px;
+  padding: 48px 40px;
+  
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05) !important;
+  color: #111827;
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  box-sizing: border-box;
+  position: relative;
+}
+
+/* --- HEADER --- */
+.signup-container h2 {
+  font-size: 32px;
+  font-weight: 800;
+  margin: 0 0 40px 0;
+  letter-spacing: -0.5px;
+  color: #111827 !important;
+  text-transform: uppercase;
+  text-align: center;
+  text-shadow: none !important; 
+}
+
+/* --- FORM LAYOUT --- */
+.signup-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* --- HARDWARE INPUTS --- */
+.signup-container input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 18px 20px;
+  border: 1px solid #D1D5DB !important; 
+  background-color: #F9FAFB !important; 
+  border-radius: 12px;
+  color: #111827 !important; 
+  font-size: 15px;
+  font-family: inherit;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.02) !important; 
+}
+
+.signup-container input:focus {
+  outline: none;
+  background-color: #FFFFFF !important;
+  border-color: #FF6B00 !important;
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.02), 0 0 0 3px rgba(255, 107, 0, 0.15) !important;
+}
+
+.signup-container input::placeholder {
+  color: #9CA3AF !important; 
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+/* --- KILL BROWSER AUTOFILL YELLOW BACKGROUND --- */
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 30px #F9FAFB inset !important;
+    -webkit-text-fill-color: #111827 !important;
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+/* --- MAIN ACTION BUTTON --- */
+.signup-container button[type="submit"] {
+  background: linear-gradient(180deg, #FF7B1A 0%, #E65A00 100%);
+  color: #FFFFFF !important;
+  border: 1px solid #FF8C33; 
+  border-bottom: 3px solid #993D00; 
+  padding: 18px;
+  border-radius: 12px;
+  font-weight: 800;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+  transition: all 0.1s ease; 
+  box-shadow: 0 6px 15px rgba(255, 107, 0, 0.25);
+  margin-top: 12px;
+  text-shadow: none !important;
+}
+
+.signup-container button[type="submit"]:hover {
+  background: linear-gradient(180deg, #FF8C33 0%, #FF6B00 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(255, 107, 0, 0.35);
+  border-bottom: 3px solid #B34600;
+}
+
+.signup-container button[type="submit"]:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px 8px rgba(255, 107, 0, 0.3);
+  border-bottom-width: 1px; 
+  margin-bottom: 2px;
+}
+
+/* --- FOOTER TEXT --- */
+.signup-container p {
+  text-align: center;
+  margin: 32px 0 0 0;
+  color: #6B7280; 
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.signup-container p span {
+  color: #FF6B00;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-left: 6px;
+}
+
+.signup-container p span:hover {
+  color: #E65A00;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+/* --- PASSWORD ICON WRAPPER --- */
+.password-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.password-wrapper input {
+  padding-right: 50px; 
+}
+
+.toggle-password {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent !important;
+  border: none !important;
+  color: #9CA3AF !important; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 0 !important;
+  margin: 0 !important;
+  box-shadow: none !important;
+  transition: color 0.2s ease, transform 0.2s ease !important;
+}
+
+.toggle-password:hover {
+  color: #FF6B00 !important;
+  transform: translateY(-50%) scale(1.1) !important;
+}
+
+.toggle-password:focus {
+  outline: none !important;
+}

@@ -1,0 +1,163 @@
+/* ===================================
+   DASHBOARD - STRICT MUTED GLACIER + ORANGE
+   (Premium Typography Update)
+   =================================== */
+
+/* 1. FORCE GLOBAL LIGHT BACKGROUND & FONT */
+/* body, html, #root {
+  background-color: #F0F4F8 !important; 
+  color: #1F2937 !important;
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif !important;
+} */
+
+.dashboard {
+  width: 100%;
+  box-sizing: border-box;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  background-color: transparent !important;
+  padding-top: 120px !important; /* Pushes the content safely below the 80px Navbar */
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+/* --- HEADER SECTION --- */
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 40px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #D1D5DB !important; /* Light gray line */
+}
+
+.dashboard-header h2 {
+  font-size: 38px;
+  font-weight: 700; /* Softened from 900 for a cleaner look */
+  margin: 0 0 8px 0;
+  letter-spacing: -0.5px; /* Smoother letter spacing */
+ /* color: #111827 !important;  Pure charcoal black */
+  text-transform: uppercase;
+}
+
+.dashboard-header .subtitle {
+  color: #6B7280 !important; /* Medium gray */
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0;
+}
+
+/* Update Diet Button */
+.add-btn {
+  background-color: #FF6B00 !important; /* Brand Orange */
+  color: #FFFFFF !important;
+  border: none;
+  padding: 14px 28px;
+  border-radius: 10px;
+  font-weight: 700; /* Softened from 800 */
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 15px rgba(255, 107, 0, 0.25) !important;
+}
+
+.add-btn:hover {
+  background-color: #E65A00 !important;
+  transform: translateY(-2px);
+}
+
+/* --- SUMMARY GRID --- */
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+/* --- THE CARDS --- */
+.card {
+  background-color: #FFFFFF !important;
+  border: 1px solid #E5E7EB !important; /* Light gray border */
+  border-top: 4px solid #FF6B00 !important; /* ALL cards get the Orange accent now */
+  border-radius: 16px;
+  padding: 32px 28px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05) !important;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1) !important;
+  border-color: #D1D5DB !important;
+}
+
+/* Icons - Forced to Brand Orange */
+.card-top {
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  font-size: 28px;
+  color: #FF6B00 !important; 
+  filter: drop-shadow(0 2px 4px rgba(255, 107, 0, 0.2)) !important;
+}
+
+/* Fix Invisible Card Headers & Typography */
+.card h3, 
+.card .title-text,
+.card-top span {
+  font-size: 13px !important;
+  font-weight: 600 !important; /* Softened from 800 */
+  text-transform: uppercase !important;
+  letter-spacing: 1px !important; /* Reduced stretch */
+  color: #6B7280 !important; 
+  margin: 0 0 0 12px !important;
+}
+
+/* Card Values */
+.card .value {
+  font-size: 34px !important;
+  font-weight: 700 !important; /* Softened from 900 */
+  color: #111827 !important; /* Pure charcoal */
+  margin: 0;
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  white-space: nowrap;
+}
+
+/* --- QUOTE SECTION --- */
+.quote-box {
+  background-color: #FFFFFF !important;
+  border: 1px solid #E5E7EB !important;
+  border-left: 4px solid #FF6B00 !important;
+  border-radius: 12px;
+  padding: 24px 32px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05) !important;
+}
+
+.quote-box p {
+  margin: 0;
+  color: #4B5563 !important; /* Dark gray */
+  font-size: 18px;
+  font-style: italic;
+  font-weight: 500;
+  text-align: left !important;
+}
+
+.dashboard-header div {
+  text-align: left !important;
+}
+
+.calorie-summary h2, .calorie-summary h3, .calorie-summary h4, .calorie-summary span.title,
+.meal-header h2, .meal-header h3, .meal-header h4, .meal-header span.title {
+  color: #6B7280 !important; /* Forces the Slate Gray color */
+}

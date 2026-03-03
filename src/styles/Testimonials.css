@@ -1,0 +1,74 @@
+/* ===================================
+   TESTIMONIALS SECTION - MUTED GLACIER LIGHT
+   =================================== */
+
+.testimonials {
+  background-color: #F0F4F8; /* Muted Glacier */
+  padding: 100px 20px;
+  text-align: center;
+  color: #111827;
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+}
+
+.testimonials h2 {
+  font-size: 34px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: -0.5px;
+  margin-bottom: 50px;
+  color: #111827;
+}
+
+.testimonial-list {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* --- PURE WHITE CARDS --- */
+.testimonial-item {
+  background: #FFFFFF; 
+  border: 1px solid #E5E7EB;
+  border-top: 4px solid #FF6B00; 
+  border-radius: 16px;
+  padding: 40px 35px;
+  width: calc(50% - 30px);
+  max-width: 450px;
+  text-align: center; 
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.08);
+}
+
+.testimonial-item p {
+  color: #4B5563; /* Slate Gray for readability */
+  font-size: 17px;
+  font-style: italic;
+  line-height: 1.7;
+  margin-bottom: 25px;
+  font-weight: 500;
+}
+
+.testimonial-item h4 {
+  color: #111827; /* Dark Charcoal Name */
+  font-weight: 800;
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin: 0;
+  padding-top: 20px;
+  border-top: 1px solid #E5E7EB; 
+}
+
+@media (max-width: 768px) {
+  .testimonial-item {
+    width: 100%;
+  }
+}
