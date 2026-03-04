@@ -1,0 +1,151 @@
+/* ===================================
+   BENEFITS SECTION - MUTED GLACIER LIGHT
+   =================================== */
+
+.benefits {
+  background-color: #F0F4F8; /* Muted Glacier */
+  padding: 90px 20px;
+  text-align: center;
+  color: #111827;
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  border-top: 1px solid #E5E7EB;
+  border-bottom: 1px solid #E5E7EB;
+}
+
+.benefits h2 {
+  font-size: 34px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: -0.5px;
+  margin-bottom: 15px;
+  color: #111827; /* Dark Charcoal */
+}
+
+.benefits > p {
+  color: #4B5563; /* Medium Gray */
+  font-size: 16px;
+  margin-bottom: 50px;
+  font-weight: 500;
+}
+
+.benefits ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* --- PURE WHITE CARDS --- */
+.benefits li {
+  background: #FFFFFF; /* Pure White */
+  border: 1px solid #E5E7EB; 
+  border-top: 4px solid #FF6B00; /* Orange Accent */
+  padding: 24px 32px;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 15px;
+  color: #111827;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: calc(50% - 24px); 
+  max-width: 400px;
+  box-sizing: border-box;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05); 
+  transition: all 0.2s ease;
+}
+
+.benefits li:hover {
+  transform: translateY(-4px);
+  border-color: #D1D5DB; 
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.08);
+}
+
+@media (max-width: 768px) {
+  .benefits li {
+    width: 100%; 
+  }
+}
+
+
+/* ===================================
+   BENEFITS SECTION - MUTED GLACIER LIGHT
+   =================================== */
+
+.benefits {
+  background-color: #F0F4F8; /* Muted Glacier */
+  padding: 90px 20px;
+  text-align: center;
+  color: #111827;
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  border-top: 1px solid #E5E7EB;
+  border-bottom: 1px solid #E5E7EB;
+}
+
+.benefits h2 {
+  font-size: 34px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: -0.5px;
+  margin-bottom: 15px;
+  color: #111827; /* Dark Charcoal */
+}
+
+.benefits > p {
+  color: #4B5563; /* Medium Gray */
+  font-size: 16px;
+  margin-bottom: 50px;
+  font-weight: 500;
+}
+
+.benefits ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* --- PURE WHITE CARDS --- */
+.benefits li {
+  background: #FFFFFF; /* Pure White */
+  border: 1px solid #E5E7EB; 
+  border-top: 4px solid #FF6B00; /* Orange Accent */
+  padding: 24px 32px;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 15px;
+  color: #111827;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: calc(50% - 24px); 
+  max-width: 400px;
+  box-sizing: border-box;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05); 
+  transition: all 0.2s ease;
+}
+
+.benefits li:hover {
+  transform: translateY(-4px);
+  border-color: #D1D5DB; 
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.08);
+}
+
+@media (max-width: 768px) {
+  .benefits li {
+    width: 100%; 
+  }
+}
+
+
+

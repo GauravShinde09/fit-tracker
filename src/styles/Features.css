@@ -1,0 +1,62 @@
+
+/* ===================================
+   FEATURES SECTION - DEEP BLACK
+   =================================== */
+
+.features {
+  background-color: #0B0D14; /* Deepest Black */
+  padding: 90px 20px;
+  text-align: center;
+  color: #F8FAFC;
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+}
+
+.features h2 {
+  font-size: 34px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  margin-bottom: 50px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+
+.feature-list {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.feature-item {
+  background: #111827; /* Dark Charcoal Cards */
+  border: 1px solid #1F2937;
+  border-top: 4px solid #FF6B00;
+  padding: 40px 30px;
+  border-radius: 16px;
+  width: 320px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  transition: all 0.3s ease;
+}
+
+.feature-item:hover {
+  transform: translateY(-8px);
+  border-color: #FF6B00;
+  box-shadow: 0 20px 40px rgba(255, 107, 0, 0.15);
+}
+
+.feature-item h3 {
+  color: #FFFFFF;
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+}
+
+.feature-item p {
+  color: #9CA3AF;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+

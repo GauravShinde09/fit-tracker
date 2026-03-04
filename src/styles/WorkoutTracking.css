@@ -1,0 +1,153 @@
+/* ===================================
+   FIT TRACKER - ELITE PROFESSIONAL
+   (Main Layout & Typography - Light Theme)
+   =================================== */
+
+body {
+  background-color: #F0F4F8 !important; /* Forces Muted Glacier */
+  margin: 0;
+  padding: 0;
+  color: #1F2937 !important; /* Dark text */
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.tracker-page-root {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  min-height: 100vh;
+  background-color: transparent !important;
+}
+
+/* --- HEADER --- */
+.tracker-top-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 50px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #E5E7EB; /* Light border */
+}
+
+.brand-group h1 {
+  font-size: 38px;
+  font-weight: 700; /* Softened from 900 */
+  margin: 0;
+  letter-spacing: -1px;
+  color: #111827 !important; /* Pure charcoal */
+  text-transform: uppercase;
+}
+
+.brand-group p {
+  color: #6B7280; /* Slate gray */
+  margin: 6px 0 0 0;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/* --- DATE CONTROLLER --- */
+.date-controller {
+  display: flex;
+  background: #FFFFFF; /* White pill */
+  border-radius: 12px;
+  padding: 6px;
+  align-items: center;
+  gap: 15px;
+  border: 1px solid #E5E7EB;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.date-controller button {
+  background: #F3F4F6; /* Light gray button */
+  border: 1px solid #E5E7EB;
+  color: #4B5563; /* Dark gray icon */
+  width: 40px;
+  height: 40px;
+  border-radius: 8px; 
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  line-height: 1;
+}
+
+.date-controller button:hover {
+  background: #FF6B00;
+  border-color: #FF6B00;
+  color: #FFFFFF;
+}
+
+.current-date {
+  font-weight: 700;
+  color: #FF6B00;
+  font-family: 'SF Mono', Consolas, monospace;
+  font-size: 16px;
+  padding: 0 12px;
+  letter-spacing: 1px;
+}
+
+/* --- SECTION LABELS (Fixes Invisible Text) --- */
+.card-label, h3 {
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 1.5px !important;
+  color: #6B7280 !important; /* Visible Slate Gray */
+  margin-bottom: 20px !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+}
+
+.card-label::before, h3::before {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background-color: #FF6B00;
+  border-radius: 50%;
+}
+
+/* --- GRID LAYOUT --- */
+.tracker-main-layout {
+  display: grid;
+  grid-template-columns: 440px 1fr;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+.input-sidebar {
+  position: sticky;
+  top: 40px;
+  width: 100%;
+}
+
+/* --- EXERCISE SEARCH & FORM WIDTH FIX --- */
+.input-sidebar .component-container form > div {
+  width: 100%;
+}
+
+.input-sidebar input[type="text"],
+.input-sidebar input[placeholder*="Duration"],
+.input-sidebar input[placeholder*="Search"] {
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+  margin-bottom: 16px !important; 
+}  
+
+/* --- RESPONSIVE --- */
+@media (max-width: 1000px) {
+  .tracker-main-layout {
+    grid-template-columns: 1fr;
+  }
+  .input-sidebar {
+    position: static;
+  }
+}

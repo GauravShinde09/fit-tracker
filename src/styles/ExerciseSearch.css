@@ -1,0 +1,111 @@
+/* ===================================
+   SMART EXERCISE SEARCH DROPDOWN
+   (Muted Glacier Light Theme - Final Polish)
+   =================================== */
+
+.exercise-search-container {
+  position: relative;
+  width: 100%;
+}
+
+/* --- HARDWARE INPUT STYLING --- */
+.exercise-search-input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 18px 20px; 
+  border-radius: 12px;
+  border: 1px solid #D1D5DB !important; /* Crisp light gray border */
+  background-color: #F9FAFB !important; /* Very light inside */
+  color: #111827 !important; /* Dark text */
+  font-size: 15px;
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.02); 
+}
+
+.exercise-search-input:focus {
+  outline: none;
+  background-color: #FFFFFF !important; /* Pure white on focus */
+  border-color: #FF6B00 !important; /* Brand orange */
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.02), 0 0 0 3px rgba(255, 107, 0, 0.15) !important;
+}
+
+.exercise-search-input::placeholder {
+  color: #9CA3AF !important; /* Soft silver */
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+/* --- THE FLOATING DROPDOWN MENU --- */
+.exercise-dropdown {
+  position: absolute;
+  top: 100%;                  
+  left: 0;
+  width: 100%;
+  margin-top: 8px;
+  background: #FFFFFF !important; /* Forces pure white base */
+  border: 1px solid #E5E7EB !important;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1) !important; 
+  max-height: 240px;
+  overflow-y: auto;
+  z-index: 9999;
+}
+
+/* --- EACH SUGGESTION ITEM --- */
+.exercise-item {
+  position: relative; /* CRITICAL FIX: Keeps the orange line inside the item */
+  padding: 14px 18px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  color: #4B5563 !important; 
+  background-color: #FFFFFF !important; /* CRITICAL FIX: Forces normal state to be white */
+  border-bottom: 1px solid #F3F4F6 !important; 
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.exercise-item:last-child {
+  border-bottom: none !important;
+}
+
+/* --- THE PREMIUM HOVER EFFECT --- */
+.exercise-item:hover {
+  background-color: #F1F5F9 !important; /* Creates the distinct soft gray highlight */
+  padding-left: 28px !important; 
+}
+
+.exercise-item:hover span,
+.exercise-item:hover .exercise-name {
+  color: #E65A00 !important; /* Deep, readable orange */
+  font-weight: 700 !important;
+}
+
+.exercise-item:hover::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0; /* CRITICAL FIX: Anchors the line correctly */
+  width: 4px;
+  height: 100%;
+  background-color: #FF6B00;
+  border-radius: 0 4px 4px 0;
+}
+
+/* --- CUSTOM SCROLLBAR REPAIR (Sleek Floating Pill) --- */
+.exercise-dropdown::-webkit-scrollbar {
+  width: 10px; 
+}
+.exercise-dropdown::-webkit-scrollbar-track {
+  background: #FFFFFF !important; /* Blends perfectly into dropdown */
+  border-radius: 0 12px 12px 0;
+}
+.exercise-dropdown::-webkit-scrollbar-thumb {
+  background: #CBD5E1 !important; /* Soft, clean slate gray */
+  border-radius: 10px;
+  border: 3px solid #FFFFFF; /* The magic border for the pill effect */
+}
+.exercise-dropdown::-webkit-scrollbar-thumb:hover {
+  background: #FF6B00 !important; /* Turns brand orange when grabbed */
+}

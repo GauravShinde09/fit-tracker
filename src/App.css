@@ -1,0 +1,177 @@
+/* ===================================
+   GLOBAL RESET (Kills Vite Defaults)
+   =================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden; /* Stops horizontal scrolling bugs */
+  background-color: #F0F4F8; /* Muted Glacier background */
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+}
+
+/* 🔥 THE VITE KILLER: This breaks the invisible centering trap */
+#root {
+  width: 100%;
+  min-height: 100vh;
+  display: block !important; /* Kills Vite's flexbox centering */
+  max-width: none !important; /* Kills Vite's 1280px limit */
+  margin: 0 !important;
+  padding: 0 !important;
+  text-align: left !important;
+}
+
+/* =================================================
+   GLOBAL TYPOGRAPHY HIERARCHY
+   ================================================= */
+
+/* 1. PRIMARY: The Anchors (Deep Charcoal) */
+/* Removed !important so dark sections like the Hero can still use White text */
+h1, h2, h3, h4, h5, h6, 
+strong, .card-label, .section-label, 
+.form-header h3, .log-header h3, .card h3 {
+    color: #111827; 
+    opacity: 1;
+    visibility: visible;
+}
+
+/* 2. SECONDARY: The Reading Text (Slate Gray) */
+p, span, .workout-meta, .workout-calories, 
+.card-top span, .sets-header-grid span {
+    color: #111827; 
+}
+
+/* 3. TERTIARY: Background Details (Silver) */
+input::placeholder, textarea::placeholder, .text-muted, small {
+    color: #9CA3AF; 
+}
+
+/* =================================================
+   COMPONENT FIXES
+   ================================================= */
+
+/* 4. FIX THE "DARK BLOCKS" IN WORKOUT TRACKER */
+/* 🔥 THE FIX: Replaced greedy wildcards with specific classes to stop color bleeding */
+/* .sets-header-grid, 
+.exercise-item,
+.set-data-line,
+.workout-history-header,
+.log-item-row {
+    background-color: #F1F5F9 !important;
+    
+    color: #405278 !important;
+     
+} */
+
+/* 5. FIX INVISIBLE INPUT TEXT & PLACEHOLDERS */
+/* 🔥 THE FIX: Removed 'select' from this global rule so it stops fighting the dropdowns */
+input, textarea {
+    color: #1E293B !important; /* Dark text */
+    background-color: #FFFFFF !important; /* White background */
+    border: 1px solid #D1D5DB !important;
+}
+
+input::placeholder, textarea::placeholder {
+    color: #94A3B8 !important; /* Visible silver */
+}
+
+/* 6. REPAIR THE CARDS (White background, Orange accent) */
+.card, .history-card-premium, .meal-card, .progress-card, .workout-log-premium {
+    background-color: #FFFFFF !important;
+    color: #1E293B !important;
+    border: 1px solid #E2E8F0 !important;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05) !important;
+}
+
+/* 7. UNIFY ACTION BUTTONS */
+/* .btn-edit, .btn-cancel, .meal-actions button:first-child, .progress-actions button:first-child {
+    background-color: #F1F5F9 !important;
+    color: #475569 !important;
+    border: 1px solid #E2E8F0 !important;
+} */
+
+.btn-edit:hover, .btn-cancel:hover {
+    background-color: #E2E8F0 !important;
+    color: #0F172A !important;
+}
+
+/* 8. GLOBAL SCROLLBAR (Matches Muted Glacier) */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #F0F4F8;
+}
+::-webkit-scrollbar-thumb {
+    background: #CBD5E1;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #FF6B00;
+}
+
+/* 9. REMOVE UGLY BROWSER SPINNERS ON NUMBER INPUTS */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield; /* Keeps Firefox happy */
+  appearance: textfield; 
+}
+
+/* 10. GLOBAL INPUT FIX (RESTORES BLINKING CURSOR) */
+input, textarea {
+    /* Forces the blinking typing cursor to be visible */
+    caret-color: #120f0d !important; 
+}
+
+/* 11. KILL THE BLACK FLASH ON DROPDOWNS & INPUTS */
+/* 🔥 THE FIX: Removed 'select' from these transition animations */
+input, textarea, button {
+    /* Kills the black flash when clicking on mobile/Chrome */
+    -webkit-tap-highlight-color: transparent !important; 
+    /* Removes the ugly default black/blue browser outline */
+    outline: none !important; 
+}
+
+input:focus, textarea:focus {
+    /* Adds a premium Signature Orange glow when you click or type */
+    border-color: #FF6B00 !important;
+    box-shadow: 0 0 0 3px rgba(255, 107, 0, 0.15) !important;
+    transition: all 0.2s ease;
+}
+
+/* =================================================
+   BOILERPLATE LOGO ANIMATIONS
+   ================================================= */
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
