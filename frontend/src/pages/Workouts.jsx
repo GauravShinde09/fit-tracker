@@ -14,7 +14,7 @@ const Workouts = () => {
       try {
         const token = localStorage.getItem("userToken"); // 🔥 Get Token
         const response = await fetch(
-          `http://localhost:5000/api/workouts/history`, // 🔥 Removed user from URL
+          `https://fit-tracker-backend-7g40.onrender.com/api/workouts/history`, // 🔥 Removed user from URL
           {
             headers: {
               "Authorization": `Bearer ${token}` // 🔥 Send Token

@@ -25,7 +25,7 @@ const Dashboard = () => {
 
         // 1️⃣ Fetch dashboard summary (Securely pass the token)
         const summaryRes = await fetch(
-          `http://localhost:5000/api/dashboard/summary`, // 🔥 Removed ?user=...
+          `https://fit-tracker-backend-7g40.onrender.com/api/dashboard/summary`, // 🔥 Removed ?user=...
           {
             headers: {
               "Authorization": `Bearer ${token}`, // 🔥 Show ID to the bouncer
@@ -38,7 +38,7 @@ const Dashboard = () => {
 
         // 2️⃣ Fetch latest progress for weight (Securely pass the token)
         const progressRes = await fetch(
-          `http://localhost:5000/api/progress`,
+          `https://fit-tracker-backend-7g40.onrender.com/api/progress`,
           {
             headers: {
               "Authorization": `Bearer ${token}`, // 🔥 Show ID to the bouncer

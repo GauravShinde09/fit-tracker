@@ -12,7 +12,7 @@ const ProgressTracker = () => {
   const fetchProgress = async () => {
     try {
       const token = localStorage.getItem("userToken"); // 🔥 Get Token
-      const res = await fetch("http://localhost:5000/api/progress", {
+      const res = await fetch("https://fit-tracker-backend-7g40.onrender.com/api/progress", {
         headers: {
           "Authorization": `Bearer ${token}` // 🔥 Send Token
         }
@@ -35,8 +35,8 @@ const ProgressTracker = () => {
 
     try {
       const endpoint = editingId
-        ? `http://localhost:5000/api/progress/update/${editingId}`
-        : "http://localhost:5000/api/progress/add";
+        ? `https://fit-tracker-backend-7g40.onrender.com/api/progress/update/${editingId}`
+        : "https://fit-tracker-backend-7g40.onrender.com/api/progress/add";
 
       const method = editingId ? "PUT" : "POST";
 
@@ -73,7 +73,7 @@ const ProgressTracker = () => {
   const handleDelete = async (id) => {
     const token = localStorage.getItem("userToken"); // 🔥 Get Token
     try {
-      const res = await fetch(`http://localhost:5000/api/progress/delete/${id}`, {
+      const res = await fetch(`https://fit-tracker-backend-7g40.onrender.com/api/progress/delete/${id}`, {
         method: "DELETE",
         headers: {
           "Authorization": `Bearer ${token}` // 🔥 Send Token

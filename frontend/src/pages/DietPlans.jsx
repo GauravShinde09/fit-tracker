@@ -26,7 +26,7 @@ const DietPlans = () => {
       try {
         const token = localStorage.getItem("userToken"); // 🔥 Get Token
         const res = await fetch(
-          `http://localhost:5000/api/diet/history?date=${date}`, // 🔥 Removed user from URL
+          `https://fit-tracker-backend-7g40.onrender.com/api/diet/history?date=${date}`, // 🔥 Removed user from URL
           {
             headers: {
               "Authorization": `Bearer ${token}` // 🔥 Send Token
@@ -80,7 +80,7 @@ const DietPlans = () => {
     }
 
     const token = localStorage.getItem("userToken"); // 🔥 Get Token
-    const res = await fetch("http://localhost:5000/api/diet/add", {
+    const res = await fetch("https://fit-tracker-backend-7g40.onrender.com/api/diet/add", {
       method: "POST",
       headers: { 
         "Content-Type": "application/json",
@@ -122,7 +122,7 @@ const DietPlans = () => {
     );
 
     const token = localStorage.getItem("userToken"); // 🔥 Get Token
-    const res = await fetch("http://localhost:5000/api/diet/add", {
+    const res = await fetch("https://fit-tracker-backend-7g40.onrender.com/api/diet/add", {
       method: "POST",
       headers: { 
         "Content-Type": "application/json",
