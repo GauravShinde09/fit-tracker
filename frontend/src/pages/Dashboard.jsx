@@ -1,5 +1,5 @@
-
 import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom"; // ✅ 1. Imported useNavigate
 import "../styles/Dashboard.css";
 import { FiActivity } from "react-icons/fi";
 import { FaWeight, FaFire, FaBullseye } from "react-icons/fa";
@@ -7,6 +7,8 @@ import { FaWeight, FaFire, FaBullseye } from "react-icons/fa";
 // 🔥 Removed const userId = "demo-user";
 
 const Dashboard = () => {
+  const navigate = useNavigate(); // ✅ 2. Activated navigate
+
   const [summary, setSummary] = useState({
     workoutsThisWeek: 0,
     currentWeight: 0,
@@ -99,7 +101,7 @@ const Dashboard = () => {
         </div>
         <button
           className="add-btn"
-          onClick={() => (window.location.href = "/diet-plans")}
+          onClick={() => navigate("/diet-plans")} // ✅ 3. Fixed the click action!
         >
           + Update Diet
         </button>
@@ -172,5 +174,3 @@ const Dashboard = () => {
 };
 
 export default Dashboard;
-
-
